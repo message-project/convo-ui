@@ -1,1 +1,7 @@
-<p>messages-tabs works!</p>
+<div id="messages-tabs">
+  <nav mat-tab-nav-bar>
+    <a *ngFor="let tab of tabs" mat-tab-link [active]="tab.selected" (click)="onTabClick(tab.status)">
+      {{getTabTitle(tab.status) }} ({{ tab.count | async }})
+    </a>
+  </nav>
+</div>

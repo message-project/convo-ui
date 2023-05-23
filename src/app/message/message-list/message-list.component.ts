@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MessagesListService } from './services/messages-list.service';
+import { MessagesState } from '../+state/message.reducer';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-message-list',
@@ -7,4 +10,6 @@ import { Component } from '@angular/core';
 })
 export class MessageListComponent {
 
+
+  constructor(private _messageListService: MessagesListService, private _store: Store<MessagesState>) {}
 }

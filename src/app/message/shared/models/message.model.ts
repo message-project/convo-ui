@@ -26,7 +26,7 @@ export class Message implements IMessage {
 }
 
 export enum MessageApprovalStatus {
-  APPROVED,
-  PENDING,
-  REJECTED,
+  APPROVED = 'APPROVED',
+  PENDING = 'PENDING',
+  REJECTED = 'REJECTED',
 }

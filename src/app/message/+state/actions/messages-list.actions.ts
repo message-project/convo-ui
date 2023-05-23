@@ -52,7 +52,7 @@ export const setRejectedMessagesCount = createAction(
 
 export const selectMessagesTab = createAction(
   '[ Messages List] Select Messages tab',
-  props<{ messagesApprovedStatus: MessageApprovalStatus }>()
+  props<{ messageApprovalStatus: MessageApprovalStatus }>()
 );
 
 export const updateSelectedMessagesList = createAction(

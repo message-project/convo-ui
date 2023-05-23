@@ -149,9 +149,9 @@ export const messagesRootReducer = createReducer(
 
   on(
     MessagesActions.selectMessagesTab,
-    (state, { messagesApprovedStatus }) => ({
+    (state, { messageApprovalStatus }) => ({
       ...state,
-      messagesSelectedTab: messagesApprovedStatus,
+      messagesSelectedTab: messageApprovalStatus,
     })
   ),
 

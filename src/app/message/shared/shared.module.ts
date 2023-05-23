@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressBarModule} from '@angular/material/progress-bar'
+import { MatTabsModule } from '@angular/material/tabs'
 
 
 
@@ -14,7 +15,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar'
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTabsModule
 
   ],
   exports: [
@@ -22,7 +24,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar'
     HttpClientModule,
     FormsModule,
     MatSnackBarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTabsModule
 ]
 })
 export class SharedModule { }
