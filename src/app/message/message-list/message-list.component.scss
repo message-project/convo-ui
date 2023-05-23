@@ -1,0 +1,8 @@
+::ng-deep .mat-tab-body-wrapper {
+  height: 100%;
+}
+
+.grid-layout {
+  height: calc(100vh - 57px - 48px - 64px - 50px) !important;
+  width: 100% !important;
+}

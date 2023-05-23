@@ -8,6 +8,7 @@ import { MessageModule } from './message/message.module';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AgGridAngular } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [AppComponent],

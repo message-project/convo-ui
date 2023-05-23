@@ -48,8 +48,8 @@ export class MessagesTabsComponent implements OnInit, OnDestroy {
     this._store
       .select(getMessagesSelectedTab)
       .pipe(takeUntil(this.#destroy))
-      .subscribe((messagesApprovalStatus: MessageApprovalStatus) => {
-        this.#prepareTabs(messagesApprovalStatus);
+      .subscribe((messageApprovalStatus: MessageApprovalStatus) => {
+        this.#prepareTabs(messageApprovalStatus);
       });
   }
 
