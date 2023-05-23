@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  url: 'https://dashboard.heroku.com/apps/convo-server',
 };

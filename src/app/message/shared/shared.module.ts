@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressBarModule} from '@angular/material/progress-bar'
 
 
 
@@ -8,8 +11,18 @@ import { HttpClientModule } from '@angular/common/http'
 
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatSnackBarModule,
+    MatProgressBarModule
+
   ],
-  exports: [HttpClientModule]
+  exports: [
+    CommonModule,
+    HttpClientModule,
+    FormsModule,
+    MatSnackBarModule,
+    MatProgressBarModule
+]
 })
 export class SharedModule { }

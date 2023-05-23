@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { IMessage, Message } from '../../shared/models/message.model';
+import { IMessage, Message, MessageApprovalStatus } from '../../shared/models/message.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class MessagesListService {
     return this._http.delete<null>(`${this.url}/${messageId}`);
   }
 
-  public getMessages(): Observable<IMessage[]> {
+  public getMessages(approvaleStatus: MessageApprovalStatus | string): Observable<IMessage[]> {
     return this._http.get<IMessage[]>(`${this.url}`);
   }
 }
