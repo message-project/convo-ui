@@ -31,7 +31,7 @@ export const loadMessageStatsSuccess = createAction(
   }>()
 );
 
-export const loadMeessagesStatsFailure = createAction(
+export const loadMessagesStatsFailure = createAction(
   '[Message List] Load Message Stats Failure'
 );
 
