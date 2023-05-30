@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class MessagesListService {
-  private url = `${environment.url}/messages`;
+  private url = `${environment.url}messages`;
 
   constructor(private _http: HttpClient) {}
 
@@ -16,7 +16,7 @@ export class MessagesListService {
     return this._http.delete<null>(`${this.url}/${messageId}`);
   }
 
-  public getMessages(approvaleStatus: MessageApprovalStatus | string): Observable<IMessage[]> {
-    return this._http.get<IMessage[]>(`${this.url}`);
+  public getMessages(status: MessageApprovalStatus | string): Observable<IMessage[]> {
+    return this._http.get<IMessage[]>(`${this.url}?status=${status.toUpperCase()}`);
   }
 }

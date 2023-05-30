@@ -5,4 +5,59 @@
 .grid-layout {
   height: calc(100vh - 57px - 48px - 64px - 50px) !important;
   width: 100% !important;
+  overflow-y: hidden;
+}
+
+.messages-grid {
+  position: relative;
+
+  mat-progress-bar {
+    z-index: 2;
+    top: -2px;
+    height: 2px;
+    position: relative
+  }
+}
+
+ag-grid-agular.ag-theme-alpine {
+  ::ng-deep {
+    .ag-header-cell-resize {
+      width: 12px;
+    }
+
+    .ag-header-sell-resize::after {
+      width: 1px !important;
+    }
+
+    .ag-root-wrapper {
+      .ag-pinned-right-header {
+        ::after {
+          display: none
+        }
+      }
+
+      border: none;
+
+      .ag-header {
+        background: #fff;
+        border: none;
+        box-shadow: inset 0px -1px 0px #e0e0e0;
+
+        .ag-header-cell-text {
+          font-size: 12px;
+          color: #232323
+        }
+
+      }
+      .ag-row {
+        border-bottom: 1px solid #e0e0e0;
+        span {
+          color: #232323;
+        }
+        .actions {
+          padding: 0px;
+        }
+      }
+    }
+  }
 }

@@ -136,7 +136,7 @@ export class MessageListEffects {
       mergeMap((action) =>
         of(
           MessagesActions.selectMessagesTab({
-            messagesApprovedStatus: MessageApprovalStatus.PENDING,
+            messageApprovalStatus: MessageApprovalStatus.PENDING,
           })
         )
       )
@@ -172,7 +172,7 @@ export class MessageListEffects {
       }),
       concatMap(() => [
         MessagesActions.selectMessagesTab({
-          messagesApprovedStatus: MessageApprovalStatus.PENDING,
+          messageApprovalStatus: MessageApprovalStatus.PENDING,
         }),
         MessagesActions.loadMessageStats(),
       ])

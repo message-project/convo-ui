@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'https://dashboard.heroku.com/apps/convo-server'
+  url: 'https://convo-server.herokuapp.com/'
 };
 
 /*

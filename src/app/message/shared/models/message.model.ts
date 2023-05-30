@@ -3,8 +3,9 @@ export interface IMessage {
   text: string;
   createdAt: string;
   updatedAt: string;
-  messageApprovalStatus: MessageApprovalStatus;
+  status: MessageApprovalStatus;
   reason: string;
+  category: string;
 }
 
 export class Message implements IMessage {
@@ -12,16 +13,18 @@ export class Message implements IMessage {
   text: string;
   createdAt: string;
   updatedAt: string;
-  messageApprovalStatus: MessageApprovalStatus;
+  status: MessageApprovalStatus;
   reason: string;
+  category: string
 
   constructor(raw: IMessage) {
     this.id = raw.id;
     this.text = raw.text;
     this.createdAt = raw.createdAt;
     this.updatedAt = raw.updatedAt;
-    this.messageApprovalStatus = raw.messageApprovalStatus;
+    this.status = raw.status;
     this.reason = raw.reason;
+    this.category = raw.category
   }
 }
 
