@@ -8,10 +8,11 @@ import { MessageListModule } from "./message-list/message-list.module";
 import { AgGridModule } from 'ag-grid-angular';
 import { MessageListEffects } from './+state/effects/message-list.effects';
 import { StoreModule } from '@ngrx/store';
-import * as fromMessages from '../message/+state/message.reducer'
+import * as fromMessages from '../message/+state/message.reducer';
+import { HeaderComponent } from './core/components/header/header.component'
 
 @NgModule({
-    declarations: [MessageComponent, MessageListComponent],
+    declarations: [MessageComponent, MessageListComponent, HeaderComponent],
     imports: [
         CommonModule,
         SharedModule,
