@@ -6,7 +6,7 @@ export class MessageCreateEffects {
     createMessage$ = createEffect
 
 
-    constructor(private readonly _actions$: Actions, private _messageFormService: ){
+    constructor(private readonly _actions$: Actions){
 
     }
 }
