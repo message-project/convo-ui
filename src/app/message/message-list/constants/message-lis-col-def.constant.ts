@@ -1,5 +1,5 @@
 import { ColDef } from "ag-grid-community";
-import { getFormattedDate } from "../utils";
+import { formatStatus, getFormattedDate } from "../utils";
 
 export const MESSAGE_LIST_GRID_COL_DEFS: ColDef[] = [
     { 
@@ -24,6 +24,7 @@ export const MESSAGE_LIST_GRID_COL_DEFS: ColDef[] = [
         field: 'status',
         sortable: true,
         filter: "agTextColumnFilter",
+        valueFormatter: formatStatus,
         resizable: true,
     },
     {
