@@ -42,6 +42,6 @@ export const MESSAGE_GRID_OPTIONS: GridOptions = {
     cacheBlockSize: 50,
     enableCellTextSelection: true,
     ensureDomOrder: true,
-    rowSelection: 'multiple',
+    // rowSelection: 'multiple',
   
 }
