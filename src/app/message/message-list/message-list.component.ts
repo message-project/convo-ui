@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { MessagesListService } from './services/messages-list.service';
 import { MessagesState } from '../+state/message.reducer';
 import { Store } from '@ngrx/store';
-import { ColDef, ColumnApi, GridApi, GridReadyEvent, RowNode, RowSelectedEvent } from 'ag-grid-community';
+import { ColDef, ColumnApi, GridApi, GridOptions, GridReadyEvent, RowNode, RowSelectedEvent } from 'ag-grid-community';
 import { APPROVED_MESSAGE_LIST_GRID_COL_DEFS, MESSAGE_LIST_GRID_COL_DEFS } from './constants/message-lis-col-def.constant';
 import * as MessagesActions from '../+state/actions'
 import { Message, MessageApprovalStatus } from '../shared/models/message.model';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { getMessagesSelectedTab } from '../+state/selectors';
 import { getApprovedMesssages, getApprovedMesssagesStatus, getPendingMesssages, getPendingMesssagesStatus } from '../+state/selectors/messages-list.selector';
+import { MESSAGE_GRID_OPTIONS } from './constants/message-grid-options.constant';
 
 @Component({
   selector: 'app-message-list',
@@ -19,6 +20,7 @@ export class MessageListComponent implements OnInit {
   #gridColumnsApi!: ColumnApi
   #gridApi!: GridApi
   public columnDefs: ColDef[] = MESSAGE_LIST_GRID_COL_DEFS
+  public gridOptions: GridOptions = MESSAGE_GRID_OPTIONS
   public rowData: Message[] = []
   #destroy: Subject<void> = new Subject<void>();
   messageSelectedTab!: MessageApprovalStatus

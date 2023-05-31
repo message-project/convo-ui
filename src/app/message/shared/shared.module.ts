@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressBarModule} from '@angular/material/progress-bar'
 import { MatTabsModule } from '@angular/material/tabs'
+import { MatIconModule } from '@angular/material/icon'
+import { MatButtonModule } from '@angular/material/button'
+
+
 
 
 
@@ -16,7 +20,9 @@ import { MatTabsModule } from '@angular/material/tabs'
     FormsModule,
     MatSnackBarModule,
     MatProgressBarModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule,
+    MatButtonModule
 
   ],
   exports: [
@@ -25,7 +31,9 @@ import { MatTabsModule } from '@angular/material/tabs'
     FormsModule,
     MatSnackBarModule,
     MatProgressBarModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule,
+    MatButtonModule
 ]
 })
 export class SharedModule { }

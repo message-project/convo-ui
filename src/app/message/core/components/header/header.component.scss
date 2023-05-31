@@ -1,0 +1,31 @@
+#header {
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0px 8px;
+
+    .header-title {
+        display: inline-block;
+
+        h3 {
+            font-size: 20px;
+            color: #232323;
+            line-height: 20px;
+            margin: 18px 8px;
+        }
+    }
+
+    .header-actions {
+        float: right;
+        display: inline-block;
+
+        #create {
+            margin: 10px 20px;
+            background: #2c6180;
+            border: 1px solid #2c6180;
+            float: right;
+            color: #fff;
+        }
+    }
+}
